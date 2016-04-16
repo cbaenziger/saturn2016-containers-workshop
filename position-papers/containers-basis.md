@@ -7,7 +7,7 @@ The Open Container Initiative provides "the specification for Standard Container
 configuration file formats
 a set of standard operations
 an execution environment
-"````[-Five Principles of Standard Containers][five principles of Standard Containers]
+"```` [-Five Principles of Standard Containers][five principles of Standard Containers]
 
 These principles however, read very similarly to existing projects and existing capabilities.
 
