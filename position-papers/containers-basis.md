@@ -30,9 +30,15 @@ Other developments in the container space are packaging ideas. Previously signif
 Many propose Docker is a very easy way to ensure an application is redeployed afresh via a scortched earth removal of old versions. Packaging systems have been providing transactional packaging for sometime though, e.g. through [IPS actions] or [sandbox locations][Snappy]. How does the rigor of packaging provide such a hinderance for Docker to succeed better?
 
 [FreeBSD jail]: jail, section 6: https://docs.freebsd.org/44doc/papers/jail/jail-6.html
+
 [kernel.org cgroups]: cgroups - https://www.kernel.org/doc/Documentation/cgroup-v1/cgroups.txt
+
 [PSARC/2002/174]: zones PSARC/2002/174 - https://us-east.manta.joyent.com/jmc/public/opensolaris/ARChive/PSARC/2002/174/zones-design.spec.opensolaris.pdf
+
 [five principles of Standard Containers]: "The 5 principles of Standard Containers" https://github.com/opencontainers/runtime-spec/blob/4dfd127f0414213f6a34e604091dcc8a3d8fa504/principles.md
+
 [Snappy]: http://www.markshuttleworth.com/archives/1434
+
 [IPS actions]: https://java.net/projects/ips/sources/pkg-gate/content/doc/actions.txt
+
 [Image Packaging System]: http://www.oug.org/files/presentations/ips-losug.pdf
