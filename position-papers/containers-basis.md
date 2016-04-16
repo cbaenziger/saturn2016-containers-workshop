@@ -10,7 +10,7 @@ an execution environment
 ````
 These principles however, read very similarly to existing projects and existing capabilities. How have they been adopted, versus how containers aim to be adopted?
 
-## Systems Level Primatives:
+## Systems Level Primitives:
 At a systems level what is a container? If it is an isolated environment for code execution, deployment and change management, how is this new? One can look at the resources isolated: network, processes, user isolation, CPU capacity, disk space, bandwidth and file system changes (packaging).
 
 The variety of Unix implementations for these techniques seem extensive:
@@ -20,17 +20,17 @@ The variety of Unix implementations for these techniques seem extensive:
 * __Block Storage__: quotas, mount-namespaces; ionice(1), blkio cgroups control
 * __File System Change__: [Image Packaging System] - pkg(8), Ubuntu [Snappy], Chef, Puppet, Ansible
 
-The Unix kernel interface controls have evolved from simple multi-user isolation, in a single kernel and "view" of a system -- focusing on user system sharing -- to more advanced full-system isolation without resorting to VM's. Currently, many of the controls implement kernel level [tagging][PSARC/2002/174], [resource refrence][FreeBSD jails] mechanisms to allow for isolation and of course the various [cgroups implementations] all as though separate OS images or kernels were in use. 
+The Unix kernel interface controls have evolved from simple multi-user isolation, in a single kernel and "view" of a system -- focusing on user system sharing -- to more advanced full-system isolation without resorting to VM's. Currently, many of the controls implement kernel level [tagging][PSARC/2002/174], [resource reference][FreeBSD jails] mechanisms to allow for isolation and of course the various [cgroups implementations] all as though separate OS images or kernels were in use. 
 
-Other developments in the container space are packaging ideas. A key of containers is [defining][appc app container executor filesystem spec] all that goes into a container image. Previously, significant work has focused on configuration management to provide idempotent configuration (e.g. Puppet, Chef) with no guarantee of reversibility -- but that of reproducability. Similarly, for easy deployment and de-installation, single application deployment formats such as JARs and WARs have come about. Even more reproducable and bounded in affect are transactional packaging systems. Unlike the above which do not encapsulate an entire machine's configuration including disks, networks and bits on disk. VM packaging formats such as [OVF] and container packaging formats do [look][OCF hook developers] to tackle this broad meta level. Further, [community ecosystems][Docker Hub] of container images; a pattern seen with other [projects][Chef Supermarket].
+Other developments in the container space are packaging ideas. A key of containers is [defining][appc app container executor filesystem spec] all that goes into a container image. Previously, significant work has focused on configuration management to provide idempotent configuration (e.g. Puppet, Chef) with no guarantee of reversibility -- but that of reproducibility. Similarly, for easy deployment and de-installation, single application deployment formats such as JARs and WARs have come about. Even more reproducible and bounded in affect are transactional packaging systems. Unlike the above which do not encapsulate an entire machine's configuration including disks, networks and bits on disk. VM packaging formats such as [OVF] and container packaging formats do [look][OCF hook developers] to tackle this broad meta level. Further, [community ecosystems][Docker Hub] of container images; a pattern seen with other [projects][Chef Supermarket].
 
-Many propose containers are an easy way to ensure an application is redeployed afresh via a scortched earth removal of old versions. Packaging systems however have been providing transactional packaging for sometime though, e.g. through [IPS actions] or [package sandbox location][Snappy]. How does the rigor of packaging provide such a hinderance for containers to succeed better in deploying software?
+Many propose containers are an easy way to ensure an application is redeployed afresh via a scorched earth removal of old versions. Packaging systems however have been providing transactional packaging for sometime though, e.g. through [IPS actions] or [package sandbox location][Snappy]. How does the rigor of packaging provide such a hindrance for containers to succeed better in deploying software?
 
 ## User Interface:
 
 What makes containers easier to use than the various implementations in use? Chiefly focusing on Docker and Rkt or similarly automated [Solaris container][Solaris zone AI configuration] creation?
 
-Containers propose to provide an easily automated configuration of many system components. This compared to [plain cgroups] is much easier to grok not having to know intracacies of low-level configuration.
+Containers propose to provide an easily automated configuration of many system components. This compared to [plain cgroups] is much easier to grok not having to know intricacies of low-level configuration.
 
 [appc app container executor filesystem spec]: https://github.com/appc/spec/blob/530d24f228d3ed0003f4397d1f861f3611ea233f/spec/ace.md#filesystem-setup
 [cgroups implementations]: http://www.haifux.org/lectures/299/netLec7.pdf
