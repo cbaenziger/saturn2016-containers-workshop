@@ -23,20 +23,19 @@ The variety of Unix implementations for these techniques seem extensive:
 * __Block Storage__: quotas, mount-namespaces; ionice(1), blkio cgroups control
 * __File System Change__: [Image Packaging System] - pkg(8), Ubuntu [Snappy], Chef, Puppet, Ansible
 
-The Unix kernel interface controls have evolved from simple multi-user isolation, in a single kernel and "view" of a system -- focusing on user system sharing -- to more advanced full-system isolation without resorting to VM\'s. Currently, many of the controls implement kernel level [Tagging], [resource refrence] mechanisms to allow for isolation and of course [plain cgroups] all as though separate OS images or kernels were in use. 
+The Unix kernel interface controls have evolved from simple multi-user isolation, in a single kernel and "view" of a system -- focusing on user system sharing -- to more advanced full-system isolation without resorting to VM's. Currently, many of the controls implement kernel level [tagging], [resource refrence][FreeBSD jails] mechanisms to allow for isolation and of course [plain cgroups] all as though separate OS images or kernels were in use. 
 
 Other developments in the container space are packaging ideas. Previously significant work has focused on configuration management (Puppet, Chef), single application deployment formats (WARs, JARs) and now transactional packaging; however, different than VM packaging formats such as OVF, container packaging formats look to tackle a different meta level again; but do they?
 
 Many propose Docker is a very easy way to ensure an application is redeployed afresh via a scortched earth removal of old versions. Packaging systems have been providing transactional packaging for sometime though, e.g. through [IPS actions] or [package sandbox location]. How does the rigor of packaging provide such a hinderance for Docker to succeed better?
 
-[FreeBSD jails]: jail, section 6: https://docs.freebsd.org/44doc/papers/jail/jail-6.html
-[resource reference]: jail, section 6: https://docs.freebsd.org/44doc/papers/jail/jail-6.html
+[FreeBSD jails]: https://docs.freebsd.org/44doc/papers/jail/jail-6.html
 
-[plain cgroups]: cgroups - https://www.kernel.org/doc/Documentation/cgroup-v1/cgroups.txt
+[plain cgroups]: https://www.kernel.org/doc/Documentation/cgroup-v1/cgroups.txt
 
-[Tagging]: zones PSARC/2002/174 - https://us-east.manta.joyent.com/jmc/public/opensolaris/ARChive/PSARC/2002/174/zones-design.spec.opensolaris.pdf
+[tagging]: https://us-east.manta.joyent.com/jmc/public/opensolaris/ARChive/PSARC/2002/174/zones-design.spec.opensolaris.pdf
 
-[Five Principles of Standard Containers]: "The 5 principles of Standard Containers" https://github.com/opencontainers/runtime-spec/blob/4dfd127f0414213f6a34e604091dcc8a3d8fa504/principles.md
+[Five Principles of Standard Containers]: https://github.com/opencontainers/runtime-spec/blob/4dfd127f0414213f6a34e604091dcc8a3d8fa504/principles.md
 
 [Snappy]: http://www.markshuttleworth.com/archives/1434
 
