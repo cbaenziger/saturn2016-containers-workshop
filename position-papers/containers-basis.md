@@ -9,7 +9,7 @@ a set of standard operations
 an execution environment
 "
 ````
-[Five Principles of Standard Containers][five principles of Standard Containers]
+[Five Principles of Standard Containers][five_principles_of_Standard_Containers]
 
 These principles however, read very similarly to existing projects and existing capabilities.
 
@@ -18,22 +18,22 @@ At a systems level what is a container? If it is an isolated environment for cod
 
 The variety of Unix implementations for these techniques seem extensive:
 * __Networking__: individual interfaces, pf(4)/tc(8), ip-netns(8)
-* __Processes__: [FreeBSD jails][FreeBSD_jail], zones, pid-namespaces
+* __Processes__: [FreeBSD jails][FreeBSDjail], zones, pid-namespaces
 * __CPU Capacity__: ulimit, Solaris resource controls
 * __Block Storage__: quotas, mount-namespaces; ionice(1), blkio cgroups control
 * __File System Change__: [Image_Packaging_System] - pkg(8), Ubuntu [Snappy], Chef, Puppet, Ansible
 
-The Unix kernel interface controls have evolved from simple multi-user isolation, in a single kernel and "view" of a system -- focusing on user system sharing -- to more advanced full-system isolation without resorting to VM's. Currently, many of the controls implement kernel level [tagging][PSARC/2002/174], [resource refrence][FreeBSD_jail] mechanisms to allow for isolation as though separate OS images or kernels were in use.
+The Unix kernel interface controls have evolved from simple multi-user isolation, in a single kernel and "view" of a system -- focusing on user system sharing -- to more advanced full-system isolation without resorting to VM's. Currently, many of the controls implement kernel level [tagging][PSARC2002174], [resource refrence][FreeBSDjail] mechanisms to allow for isolation and of course raw [cgroups] all as though separate OS images or kernels were in use. 
 
 Other developments in the container space are packaging ideas. Previously significant work has focused on configuration management (Puppet, Chef), single application deployment formats (WARs, JARs) and now transactional packaging; however, different than VM packaging formats such as OVF, container packaging formats look to tackle a different meta level again; but do they?
 
 Many propose Docker is a very easy way to ensure an application is redeployed afresh via a scortched earth removal of old versions. Packaging systems have been providing transactional packaging for sometime though, e.g. through [IPS_actions] or [sandbox locations][Snappy]. How does the rigor of packaging provide such a hinderance for Docker to succeed better?
 
-[FreeBSD_jail]: jail, section 6: https://docs.freebsd.org/44doc/papers/jail/jail-6.html
+[FreeBSDjail]: jail, section 6: https://docs.freebsd.org/44doc/papers/jail/jail-6.html
 
-[kernel.org cgroups]: cgroups - https://www.kernel.org/doc/Documentation/cgroup-v1/cgroups.txt
+[kernelorgcgroups]: cgroups - https://www.kernel.org/doc/Documentation/cgroup-v1/cgroups.txt
 
-[PSARC/2002/174]: zones PSARC/2002/174 - https://us-east.manta.joyent.com/jmc/public/opensolaris/ARChive/PSARC/2002/174/zones-design.spec.opensolaris.pdf
+[PSARC2002174]: zones PSARC/2002/174 - https://us-east.manta.joyent.com/jmc/public/opensolaris/ARChive/PSARC/2002/174/zones-design.spec.opensolaris.pdf
 
 [five_principles_of_Standard_Containers]: "The 5 principles of Standard Containers" https://github.com/opencontainers/runtime-spec/blob/4dfd127f0414213f6a34e604091dcc8a3d8fa504/principles.md
 
