@@ -28,10 +28,63 @@ Many propose containers are an easy way to ensure an application is redeployed a
 
 ## User Interface:
 
-What makes containers easier to use than the various implementations in use? Chiefly focusing on Docker and Rkt or similarly automated [Solaris container][Solaris zone AI configuration] creation?
+What makes containers easier to use than the various low-level predecessors they abstract? Here let us chiefly focus on Docker and Rkt or similarly automated [Solaris container][Solaris zone AI configuration] creation. The Open Container Initiative proposes standard operations and one can find Docker provides such operations in its [API][Docker API]:
+* Containers
+  * List containers
+  * Create a container
+  * Inspect a container
+  * List processes running inside a container
+  * Get container logs
+  * Inspect changes on a container’s filesystem
+  * Export a container
+  * Get container stats based on resource usage
+  * Resize a container TTY
+  * Start a container
+  * Stop a container
+  * Restart a container
+  * Kill a container
+  * Rename a container
+  * Pause a container
+  * Unpause a container
+  * Attach to a container
+  * Attach to a container (websocket)
+  * Wait a container
+  * Remove a container
+  * Copy files or folders from a container
+  * Retrieving information about files and folders in a container
+  * Get an archive of a filesystem resource in a container
+  * Extract an archive of files or folders to a directory in a container
+* Images
+  * List Images
+  * Build image from a Dockerfile
+  * Create an image
+  * Inspect an image
+  * Get the history of an image
+  * Push an image on the registry
+  * Tag an image into a repository
+  * Remove an image
+  * Search images
+* Misc
+  * Check auth configuration
+  * Display system-wide information
+  * Show the docker version information
+  * Ping the docker server
+  * Create a new image from a container’s changes
+  * Monitor Docker’s events
+  * Get a tarball containing all images in a repository
+  * Get a tarball containing all images.
+  * Load a tarball with a set of images and tags into docker
+  * Image tarball format
+  * Exec Create
+  * Exec Start
+  * Exec Resize
+  * Exec Inspect
 
-Containers propose to provide an easily automated configuration of many system components. This compared to [plain cgroups] is much easier to grok not having to know intricacies of low-level configuration.
 
+Containers propose to provide an easily automated configuration of many system components. This compared to [plain cgroups] is much easier to operate concisely abstracting the intricacies of low-level configuration. Further, deployment choices for containers provide CLI operations, not requiring one to build an [operation stack in a configuration management tool][chef-cgroups]. However, what role do deployment platforms for containers play? For example, one can deploy Docker images via Apache Mesos, Apache YARN, Docker Swarm and Google Container Engine. These offerings then beg the question of orchestration and if previous systems such as [Amazon CloudFormation] or [OpenStack Heat] can properly offer semantics for container deployment -- or are they obviated?
+
+[Amazon CloudFormation]: http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/Welcome.html
+[OpenStack Heat]: https://wiki.openstack.org/wiki/Heat
 [appc app container executor filesystem spec]: https://github.com/appc/spec/blob/530d24f228d3ed0003f4397d1f861f3611ea233f/spec/ace.md#filesystem-setup
 [cgroups implementations]: http://www.haifux.org/lectures/299/netLec7.pdf
 [FreeBSD jails]: https://docs.freebsd.org/44doc/papers/jail/jail-6.html
@@ -46,3 +99,5 @@ Containers propose to provide an easily automated configuration of many system c
 [Solaris zone AI configuration]: https://docs.oracle.com/cd/E23824_01/html/E21798/glitd.html#ngz-ai-manifest
 [Docker Hub]: https://hub.docker.com/
 [Chef Supermarket]: https://supermarket.chef.io/
+[chef-cgroups]: https://github.com/nathenharvey/chef-cgroups
+[Docker API]: https://docs.docker.com/engine/reference/api/docker_remote_api_v1.20/
