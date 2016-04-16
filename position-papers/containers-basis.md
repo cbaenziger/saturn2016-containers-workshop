@@ -23,7 +23,7 @@ The variety of Unix implementations for these techniques seem extensive:
 * __Block Storage__: quotas, mount-namespaces; ionice(1), blkio cgroups control
 * __File System Change__: [Image Packaging System] - pkg(8), Ubuntu [Snappy], Chef, Puppet, Ansible
 
-The Unix kernel interface controls have evolved from simple multi-user isolation, in a single kernel and "view" of a system -- focusing on user system sharing -- to more advanced full-system isolation without resorting to VM's. Currently, many of the controls implement kernel level [Tagging], [resource refrence] mechanisms to allow for isolation and of course [plain cgroups] all as though separate OS images or kernels were in use. 
+The Unix kernel interface controls have evolved from simple multi-user isolation, in a single kernel and "view" of a system -- focusing on user system sharing -- to more advanced full-system isolation without resorting to VM\'s. Currently, many of the controls implement kernel level [Tagging], [resource refrence] mechanisms to allow for isolation and of course [plain cgroups] all as though separate OS images or kernels were in use. 
 
 Other developments in the container space are packaging ideas. Previously significant work has focused on configuration management (Puppet, Chef), single application deployment formats (WARs, JARs) and now transactional packaging; however, different than VM packaging formats such as OVF, container packaging formats look to tackle a different meta level again; but do they?
 
