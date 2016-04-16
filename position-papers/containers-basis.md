@@ -14,7 +14,7 @@ These principles however, read very similarly to existing projects and existing 
 At a systems level what is a container? If it is an isolated environment for code execution, deployment and change management, how is this new? One can look at the resources isolated: network, processes, user isolation, CPU capacity, disk space, bandwidth and file system changes (packaging).
 
 The variety of Unix implementations for these techniques seem extensive:
-* __Networking__: individual interfaces, pf(4)/tc(8), ip-netns(8)
+* __Networking__: multiple network interfaces, pf(4)/tc(8), ip-netns(8)
 * __Processes__: [FreeBSD jails], [zones][PSARC/2002/174], pid-namespaces
 * __CPU Capacity__: ulimit, Solaris resource controls
 * __Block Storage__: quotas, mount-namespaces; ionice(1), blkio cgroups control
@@ -50,12 +50,13 @@ What makes containers easier to use than the various low-level predecessors they
 
 Containers propose to provide an easily automated configuration of many system components. This compared to [plain cgroups] is much easier to operate concisely abstracting the intricacies of low-level configuration. Further, deployment choices for containers provide CLI operations, not requiring one to build an [operation stack in a configuration management tool][chef-cgroups]. 
 
-What role do deployment platforms for containers play? For example, one can deploy Docker images via Apache Mesos, Apache YARN, Docker Swarm and Google Container Engine. These offerings then beg the question of orchestration and if previous systems such as [Amazon CloudFormation] or [OpenStack Heat] can properly offer semantics for container deployment -- or are they obviated? What makes containers easier than [WAR servlet deployments], or [Apache Slider based YARN application deployments].
+What role do deployment platforms for containers play? For example, one can deploy Docker images via Apache Mesos, Apache YARN, Docker Swarm and Google Container Engine. These offerings then beg the question of orchestration and if previous systems such as [Amazon CloudFormation] or [OpenStack Heat] can properly offer semantics for container deployment -- or are they [obviated][appc pods]? What makes containers easier than [WAR servlet deployments], or [Apache Slider based YARN application deployments]?
 
 [WAR servlet deployments]: https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/
 [Apache Slider based YARN application deployments]: https://slider.incubator.apache.org/docs/getting_started.html#installapp
 [Amazon CloudFormation]: http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/Welcome.html
 [OpenStack Heat]: https://wiki.openstack.org/wiki/Heat
+[appc pods]: https://github.com/appc/spec/blob/d1bb17f83f75a87c428a4bb1efe5d5ca7578d584/spec/pods.md
 [appc app container executor filesystem spec]: https://github.com/appc/spec/blob/530d24f228d3ed0003f4397d1f861f3611ea233f/spec/ace.md#filesystem-setup
 [cgroups implementations]: http://www.haifux.org/lectures/299/netLec7.pdf
 [FreeBSD jails]: https://docs.freebsd.org/44doc/papers/jail/jail-6.html
