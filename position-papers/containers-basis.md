@@ -2,12 +2,12 @@
 
 The Open Container Initiative provides "the specification for Standard Containers defines":
 
-[````
+````
 "
 configuration file formats
 a set of standard operations
 an execution environment
-"````][five principles of Standard Containers]
+"````[-Five Principles of Standard Containers][five principles of Standard Containers]
 
 These principles however, read very similarly to existing projects and existing capabilities.
 
@@ -33,4 +33,4 @@ Many propose Docker is a very easy way to ensure an application is redeployed af
 [five principles of Standard Containers]: "The 5 principles of Standard Containers" https://github.com/opencontainers/runtime-spec/blob/4dfd127f0414213f6a34e604091dcc8a3d8fa504/principles.md
 [Snappy]: http://www.markshuttleworth.com/archives/1434
 [IPS actions]: https://java.net/projects/ips/sources/pkg-gate/content/doc/actions.txt
-[Imaging Packaging System]: http://www.oug.org/files/presentations/ips-losug.pdf
+[Image Packaging System]: http://www.oug.org/files/presentations/ips-losug.pdf
