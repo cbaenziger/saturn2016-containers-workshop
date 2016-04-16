@@ -50,6 +50,8 @@ What makes containers easier to use than the various low-level predecessors they
 
 Containers propose to provide an easily automated configuration of many system components. This compared to [plain cgroups] is much easier to operate concisely abstracting the intricacies of low-level configuration. Further, deployment choices for containers provide CLI operations, not requiring one to build an [operation stack in a configuration management tool][chef-cgroups]. 
 
+## Running Containers:
+
 What role do deployment platforms for containers play? For example, one can deploy Docker images via Apache Mesos, Apache YARN, Docker Swarm and Google Container Engine. These offerings then beg the question of orchestration and if previous systems such as [Amazon CloudFormation] or [OpenStack Heat] can properly offer semantics for container deployment -- or are they [obviated][appc pods]? What makes containers easier than [WAR servlet deployments], or [Apache Slider based YARN application deployments]?
 
 [WAR servlet deployments]: https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/
