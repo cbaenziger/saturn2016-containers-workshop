@@ -1,4 +1,4 @@
-h1. Basis of Containers
+# Basis of Containers
 
 The Open Container Initiative provides "the specification for Standard Containers defines":
 
@@ -10,7 +10,7 @@ an execution environment
 
 These principles however, read very similarly to existing projects and existing capabilities.
 
-h2. Systems level:
+## Systems level:
 At a systems level what is a container? If it is an isolated environment for code execution, deployment and change management, how is this new? One can look at the resources isolated: network, processes, user isolation, CPU capacity, disk space, bandwidth and file system changes (packaging).
 
 The variety of Unix implementations for these techniques seem extensive:
